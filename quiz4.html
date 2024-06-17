@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="quiz.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <title>Mood Minder</title>
+</head>
+<body onclick="ocultarHeader()">
+    <nav>
+        <ul class="links">
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        </ul>
+    </nav>
+
+    <header id="cabecalho">
+        <div>
+            <img src="Quiz4/bodyquiz.png">
+            <h2>Body Appreciation Quiz</h2>
+            <div id="p-cabecalho">
+                <p>Having a better appreciation for the functionality of the body can be helpfull for self care.<br>This quiz uses FAS, a standardized scale used in clinical and research settings.<br>Reflect on each question and answer them honestly.</p>
+            <a href="https://www.researchgate.net/publication/319184547_The_Functionality_Appreciation_Scale_FAS_Development_and_psychometric_evaluation_in_US_community_women_and_men" target="_blank">See Source</a>
+                <p>*For educational purposes only.</p>
+                <button id="comecarQuiz" onclick="iniciarQuiz()">Start Quiz</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div id="quiz">
+            <div id="pergunta1">
+                <h1>Indicate your agreement with this statement:</h1>
+                <h2>I appreciate my body for what it is capable of doing.</h2>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q1" value="0"> Strongly disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q1" value="1"> Slightly disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q1" value="2"> Neither agree nor disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q1" value="3"> Slightly agree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q1" value="4"> Strongly agree</div>
+                <button onclick="proximaPergunta(1)">Next</button>
+            </div>
+            <div id="pergunta2">
+                <h1>Indicate your agreement with this statement:</h1>
+                <h2>Im grateful for the health of my body, even if it isn't always as healthy as I would like it to be.</h2>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q2" value="0"> Strongly disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q2" value="1"> Slightly disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q2" value="2"> Neither agree nor disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q2" value="3"> Slightly agree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q2" value="4"> Strongly agree</div>
+                <button onclick="proximaPergunta(2)">Next</button>
+            </div>
+            <div id="pergunta3">
+                <h1>Indicate your agreement with this statement:</h1>
+                <h2>I appreciate that my body allows me to communicate and interact with others.</h2>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q3" value="0"> Strongly disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q3" value="1"> Slightly disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q3" value="2"> Neither agree nor disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q3" value="3"> Slightly agree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q3" value="4"> Strongly agree</div>
+                <button onclick="proximaPergunta(3)">Next</button>
+            </div>
+            <div id="pergunta4">
+                <h1>Indicate your agreement with this statement:</h1>
+                <h2>I acknowledge and appreciate it when my body feels good and relaxed.</h2>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q4" value="0"> Strongly disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q4" value="1"> Slightly disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q4" value="2"> Neither agree nor disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q4" value="3"> Slightly agree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q4" value="4"> Strongly agree</div>
+                <button onclick="proximaPergunta(4)">Next</button>
+            </div>
+            <div id="pergunta5">
+                <h1>Indicate your agreement with this statement:</h1>
+                <h2>I am grateful that my body enables me to engage in activities that I enjoy or find important.</h2>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q5" value="0"> Strongly disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q5" value="1"> Slightly disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q5" value="2"> Neither agree nor disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q5" value="3"> Slightly agree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q5" value="4"> Strongly agree</div>
+                <button onclick="proximaPergunta(5)">Next</button>
+            </div>
+            <div id="pergunta6">
+                <h1>Indicate your agreement with this statement:</h1>
+                <h2>I feel that my body does so much for me.</h2>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q6" value="0"> Strongly disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q6" value="1"> Slightly disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q6" value="2"> Neither agree nor disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q6" value="3"> Slightly agree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q6" value="4"> Strongly agree</div>
+                <button onclick="proximaPergunta(6)">Next</button>
+            </div>
+            <div id="pergunta7">
+                <h1>Indicate your agreement with this statement:</h1>
+                <h2>I respect my body for the functions that it performs.</h2>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q7" value="0"> Strongly disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q7" value="1"> Slightly disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q7" value="2"> Neither agree nor disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q7" value="3"> Slightly agree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q7" value="4"> Strongly agree</div>
+                <button onclick="proximaPergunta(7)">Next</button>
+            </div>
+   
+        <div id="resultado" style="display: none;">
+            <h2>Results</h2>
+            <div id="mensagem-none" class="mensagem" style="display: none;">
+                <p class="mensagem-titulo">Low Body Appreciation</p>
+                <p>Your score suggests low appreciation for what your body can do.</p>
+                <p>It may be useful to practice reflecting each day on one thing your body did well, big or small. Keep investing in yourself and you will see the results!💜</p>
+            </div>
+
+            <div id="mensagem-leve" class="mensagem" style="display: none;">
+                <p class="mensagem-titulo">Neutral Body Appreciation</p>
+                <p>Your score suggests neutral appreciation for what your body can do.</p>
+                <p>It may be useful to practice reflecting each day on one thing your body did well, big or small. Keep investing in yourself and you will see the results!💜</p>
+            </div>
+            <div id="mensagem-moderada" class="mensagem" style="display: none;">
+                <p class="mensagem-titulo">High Body Appreciation</p>
+                <p>It is great that your score suggests you have high appreciation for what<br>your body can do.</p>
+                <p>Have a healthy relationship with your body is one important aspect of self love!💜</p>
+            </div>
+            </div>
+            <p id="pontuacao"></p>
+        </div>
+    </div>
+    <img class="logo" src="index/logo.png">
+    <script src="Quiz4/quiz4.js"></script>
+</body>
+</html>
