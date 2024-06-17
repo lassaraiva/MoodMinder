@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="quiz.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <title>Mood Minder</title>
+</head>
+<body onclick="ocultarHeader()">
+    <nav>
+        <ul class="links">
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        </ul>
+    </nav>
+
+    <header id="cabecalho">
+        <div>
+            <img src="Quiz3/florquiz.png">
+            <h2>Flourishing Quiz</h2>
+            <div id="p-cabecalho">
+                <p>The Flourishing Scale is a tool to help understand and improve psychological well-being.<br>
+                    It assesses different aspects of well-being, including feelings of accomplishment, positive relationships, personal growth, self-acceptance and purpose in life.<br>Reflect on each question and answer them honestly.</p>
+                    <p>This scale was developed in: Diener, E., Wirtz, D., Tov, W., Kim-Prieto, C., Choi, D., Oishi, S., & Biswas-Diener, R.(2019)</p>
+                    <p>*For educational purposes only.</p>
+                <button id="comecarQuiz" onclick="iniciarQuiz()">Start Quiz</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div id="quiz">
+            <div id="pergunta1">
+                <h1>Indicate your agreement with this statement:</h1>
+                <h2>I lead a pourposeful and meaningful life.</h2>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q1" value="0"> Strongly disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q1" value="1"> Slightly disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q1" value="2"> Neither agree nor disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q1" value="3"> Slightly agree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q1" value="4"> Strongly agree</div>
+                <button onclick="proximaPergunta(1)">Next</button>
+            </div>
+            <div id="pergunta2">
+                <h1>Indicate your agreement with this statement:</h1>
+                <h2>My social relationships are supportive and rewarding.</h2>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q2" value="0"> Strongly disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q2" value="1"> Slightly disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q2" value="2"> Neither agree nor disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q2" value="3"> Slightly agree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q2" value="4"> Strongly agree</div>
+                <button onclick="proximaPergunta(2)">Next</button>
+            </div>
+            <div id="pergunta3">
+                <h1>Indicate your agreement with this statement:</h1>
+                <h2>I am engaged and interested in my daily activities.</h2>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q3" value="0"> Strongly disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q3" value="1"> Slightly disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q3" value="2"> Neither agree nor disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q3" value="3"> Slightly agree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q3" value="4"> Strongly agree</div>
+                <button onclick="proximaPergunta(3)">Next</button>
+            </div>
+            <div id="pergunta4">
+                <h1>Indicate your agreement with this statement:</h1>
+                <h2>I actively contribute to the happiness and well-being of others.</h2>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q4" value="0"> Strongly disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q4" value="1"> Slightly disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q4" value="2"> Neither agree nor disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q4" value="3"> Slightly agree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q4" value="4"> Strongly agree</div>
+                <button onclick="proximaPergunta(4)">Next</button>
+            </div>
+            <div id="pergunta5">
+                <h1>Indicate your agreement with this statement:</h1>
+                <h2>I am competent and capable in the activities that are important to me.</h2>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q5" value="0"> Strongly disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q5" value="1"> Slightly disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q5" value="2"> Neither agree nor disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q5" value="3"> Slightly agree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q5" value="4"> Strongly agree</div>
+                <button onclick="proximaPergunta(5)">Next</button>
+            </div>
+            <div id="pergunta6">
+                <h1>Indicate your agreement with this statement:</h1>
+                <h2>I am a good person and live a good life.</h2>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q6" value="0"> Strongly disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q6" value="1"> Slightly disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q6" value="2"> Neither agree nor disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q6" value="3"> Slightly agree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q6" value="4"> Strongly agree</div>
+                <button onclick="proximaPergunta(6)">Next</button>
+            </div>
+            <div id="pergunta7">
+                <h1>Indicate your agreement with this statement:</h1>
+                <h2>I am optimistic about my future.</h2>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q7" value="0"> Strongly disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q7" value="1"> Slightly disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q7" value="2"> Neither agree nor disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q7" value="3"> Slightly agree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q7" value="4"> Strongly agree</div>
+                <button onclick="proximaPergunta(7)">Next</button>
+            </div>
+            <div id="pergunta8">
+                <h1>Indicate your agreement with this statement:</h1>
+                <h2>People respect me.</h2>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q8" value="0"> Strongly disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q8" value="1"> Slightly disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q8" value="2"> Neither agree nor disagree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q8" value="3"> Slightly agree</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q8" value="4"> Strongly agree</div>
+                <button onclick="proximaPergunta(8)">Next</button>
+            </div>
+   
+        <div id="resultado" style="display: none;">
+            <h2>Results</h2>
+            <div id="mensagem-none" class="mensagem" style="display: none;">
+                <p class="mensagem-titulo">Priorize Self-Care</p>
+                <p>Like many of us, you may be feeling unfulfilled and dissatisfied with your current situation. Just remember it is normal.
+                    Many of us find ourselves in this stat at times. It would not be surprising if some people you know are also feeling the same way,
+                    but are too nervous to say something about it.
+                </p>
+                <p>Take steps to priorize yourself and your mental health. Keep investing in yourself and you will see the results!💜</p>
+            </div>
+
+            <div id="mensagem-moderada" class="mensagem" style="display: none;">
+                <p class="mensagem-titulo">Moderate Mental Health</p>
+                <p>Like many of us, you have highlights in some areas of your life, but you may also be struggling with some challenges. This is normal 
+                    for all of us, and we all move up and down time to time.
+                <p>Take steps to priorize yourself and your mental health. Keep investing in yourself and you will see the results!💜</p>
+            </div>
+            <div id="mensagem-severa" class="mensagem" style="display: none;">
+                <p class="mensagem-titulo">Flourishing</p>
+                <p>You have a sense of pourpose and meaning in your life, positive relationships with ohers, and feelings of personal growth and accomplishment!🌸</p>
+                <p>Keep doing what you are doing!💜</p>
+            </div>
+            </div>
+            <p id="pontuacao"></p>
+        </div>
+    </div>
+    <img class="logo" src="index/logo.png">
+    <script src="Quiz3/quiz3.js"></script>
+</body>
+</html>
