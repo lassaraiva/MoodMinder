@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="quiz.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <title>Mood Minder</title>
+</head>
+<body onclick="ocultarHeader()">
+    <nav>
+        <ul class="links">
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        </ul>
+    </nav>
+
+    <header id="cabecalho">
+        <div>
+            <img src="Quiz2/depquiz.png">
+            <h2>Depression Quiz</h2>
+            <div id="p-cabecalho">
+                <p>Depression can weigh heavy yet go unrealized for years. This quiz assesses depressive symptoms with the PHQ-9, used in clinical and research settings.<br>Reflect on each question and answer them honestly.</p>
+                <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1495268/" target="_blank">See Source</a>
+                <p>*For educational purposes only.</p>
+                <button id="comecarQuiz" onclick="iniciarQuiz()">Start Quiz</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div id="quiz">
+            <div id="pergunta1">
+                <h1>Over the last 2 weeks, how often...</h1>
+                <h2>Have you felt little interest or pleasure in doing things?</h2>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q1" value="0"> Not at all</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q1" value="1"> Several days</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q1" value="2"> More than several days</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q1" value="3"> Nearly every day</div>
+                <button onclick="proximaPergunta(1)">Next</button>
+            </div>
+            <div id="pergunta2">
+                <h1>Over the last 2 weeks, how often...</h1>
+                <h2>Have you felt down, depressed or hopeless?</h2>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q2" value="0"> Not at all</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q2" value="1"> Several days</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q2" value="2"> More than several days</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q2" value="3"> Nearly every day</div>
+                <button onclick="proximaPergunta(2)">Next</button>
+            </div>
+            <div id="pergunta3">
+                <h1>Over the last 2 weeks, how often...</h1>
+                <h2>Have you had trouble falling or staying asleep, or sleeping too much?</h2>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q3" value="0"> Not at all</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q3" value="1"> Several days</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q3" value="2"> More than several days</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q3" value="3"> Nearly every day</div>
+                <button onclick="proximaPergunta(3)">Next</button>
+            </div>
+            <div id="pergunta4">
+                <h1>Over the last 2 weeks, how often...</h1>
+                <h2>Have you felt tired or had little energy?</h2>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q4" value="0"> Not at all</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q4" value="1"> Several days</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q4" value="2"> More than several days</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q4" value="3"> Nearly every day</div>
+                <button onclick="proximaPergunta(4)">Next</button>
+            </div>
+            <div id="pergunta5">
+                <h1>Over the last 2 weeks, how often...</h1>
+                <h2>Have you had poor appetite or overeating?</h2>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q5" value="0"> Not at all</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q5" value="1"> Several days</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q5" value="2"> More than several days</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q5" value="3"> Nearly every day</div>
+                <button onclick="proximaPergunta(5)">Next</button>
+            </div>
+            <div id="pergunta6">
+                <h1>Over the last 2 weeks, how often...</h1>
+                <h2>Have you felt bad about yourself or that you are a failure - or had let yourself or family down?</h2>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q6" value="0"> Not at all</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q6" value="1"> Several days</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q6" value="2"> More than several days</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q6" value="3"> Nearly every day</div>
+                <button onclick="proximaPergunta(6)">Next</button>
+            </div>
+            <div id="pergunta7">
+                <h1>Over the last 2 weeks, how often...</h1>
+                <h2>Have you had trouble concentrating on things, such as reading the newspaper or wathing tv?</h2>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q7" value="0"> Not at all</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q7" value="1"> Several days</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q7" value="2"> More than several days</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q7" value="3"> Nearly every day</div>
+                <button onclick="proximaPergunta(7)">Next</button>
+            </div>
+            <div id="pergunta8">
+                <h1>Over the last 2 weeks, how often...</h1>
+                <h2>Have you thought that you would be better off dead, or of hurting yourself?</h2>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q8" value="0"> Not at all</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q8" value="1"> Several days</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q8" value="2"> More than several days</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q8" value="3"> Nearly every day</div>
+                <button onclick="proximaPergunta(8)">Next</button>
+            </div>
+            <div id="pergunta9">
+                <h1>Because of your answers...</h1>
+                <h2>How difficult have these problems made it for you to do your work, take care of things at home, or get along with other people?</h2>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q9" value="0"> Not difficult at all</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q9" value="1"> Somewhat difficult</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q9" value="2"> Very difficult</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q9" value="3"> Extremely difficult</div>
+                <button onclick="proximaPergunta(9)">See Results</button>
+            </div>
+        </div>
+
+        <div id="resultado" style="display: none;">
+            <h2>Results</h2>
+            <div id="mensagem-none" class="mensagem" style="display: none;">
+                <p class="mensagem-titulo">Minimal Depression</p>
+                <p>This usually does not require a treatment. For now it's good to be aware of some subtle early signs of depressive disorders:<br>- Increasing loss of hope;<br>- Lost interest for things you used to enjoy before;
+                    <br>- Increased fatigue and sleep problems;<br> - Changes in appetite and weight.<br><br>Always remeber to embrace yourself! 💜
+                </p>
+            </div>
+            <div id="mensagem-leve" class="mensagem" style="display: none;">
+                <p class="mensagem-titulo">Mild depression</p>
+                <p>This usually does not require a treatment. For now it's good to be aware of some subtle early signs of depressive disorders:<br>- Increasing loss of hope;<br>- Lost interest for things you used to enjoy before;
+                    <br>- Increased fatigue and sleep problems;<br> - Changes in appetite and weight.<br><br>Always remeber to embrace yourself! 💜
+                </p>      
+            </div>
+            <div id="mensagem-moderada" class="mensagem" style="display: none;">
+                <p class="mensagem-titulo">Moderate Depression</p>
+                <p>It's recommended to seek a proper diagnosis from a mental health<br>professional based on your score.<br> It takes
+                    people an average of 11 years to seek mental health treatment. If you have not sought help yet, some options to consider are:<br>
+                - Discuss this with one trusted person;<br>- Seek online or local therapy.<br><br>Always remeber to embrace yourself! 💜</p>
+            </div>
+            <div id="mensagem-severa" class="mensagem" style="display: none;">
+                <p class="mensagem-titulo">Severe Depression</p>
+                <p>It's recommended to seek a proper diagnosis from a mental health<br>professional based on your score.<br> It takes
+                people an average of 11 years to seek mental health treatment. If you have not sought help yet, some options to consider are:<br>
+            - Discuss this with one trusted person;<br>- Seek online or local therapy.<br><br>Always remeber to embrace yourself! 💜</p>
+            </div>
+            </div>
+            <p id="pontuacao"></p>
+        </div>
+    </div>
+    <img class="logo" src="index/logo.png">
+    <script src="Quiz2/quiz2.js"></script>
+</body>
+</html>

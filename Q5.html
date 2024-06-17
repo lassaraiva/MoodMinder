@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="quiz.css" />
+    <link rel="stylesheet" href="Q5/q5.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <title>Mood Minder</title>
+    <script src="Q5/q5.js"></script>
+</head>
+<nav>
+    <ul class="links">
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+    </ul>
+</nav>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <a href="https://findahelpline.com/i/finchcare">
+                <h1>📞 Helpline</h1> 
+            </a>
+        </div>        
+        <div class="box" onclick="toggleContent('rule333')">
+            <h1>❤️ 3-3-3 Rule</h1>
+            <div id="rule333" class="content">
+                <ul>
+                    <li>👁️ Name 3 things you see</li>
+                    <li>👂 Identify 3 sounds you hear</li>
+                    <li>🖐️ Move 3 parts of your body</li>
+                </ul>
+            </div>
+        </div>
+        <div class="box" onclick="toggleContent('rainbowGrounding')">
+            <h1>🌈 Rainbow Grounding</h1>
+            <div id="rainbowGrounding" class="content">
+                <p>Look around you and identify + name:</p>
+                <ul>
+                    <li>🔴 1 red object</li>
+                    <li>🟠 1 orange object</li>
+                    <li>🟡 1 yellow object</li>
+                    <li>🟢 1 green object</li>
+                    <li>🔵 1 blue object</li>
+                    <li>🟣 1 purple object</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <img class="logo" src="index/logo.png">
+</body>
+
+</html>
