@@ -1,9 +1,7 @@
-html,body {
-  background:
-  #2e0854;
-  position: relative;
-  width: 100%;
-  height: 100vh;
+html, body {
+  margin: 0; 
+  padding: 0;
+  background: #2e0854; 
   overflow: hidden;
 }
 
@@ -22,6 +20,7 @@ html,body {
   overflow: hidden;
   z-index: 1;
 }
+
 .block:after {
   position: absolute;
   content: "";
@@ -34,6 +33,7 @@ html,body {
   animation: stars 40s linear infinite alternate;
   z-index: 2;
 }
+
 .block:before {
   position: absolute;
   content: "";
@@ -58,13 +58,14 @@ html,body {
 
 .cloudsWrapper {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 105%;
+  height: 100%;
   overflow: hidden;
   z-index: 3;
 }
+
 .cloudsWrapper:before,
 .cloudsWrapper:after {
   position: absolute;

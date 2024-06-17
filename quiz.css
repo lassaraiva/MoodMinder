@@ -38,7 +38,7 @@ nav ul li a {
 
 nav ul li a i {
     font-size: 24px;
-    margin-right: 5px;
+    margin-right: 8px;
 }
 
 header {   
@@ -182,8 +182,8 @@ button:hover {
         font-size: 2em;
     }
     .logo {
-        max-width: 15%;
-        left: 1%;
+        max-width: 10%;
+        left: 0;
         bottom:0;
     }
     
