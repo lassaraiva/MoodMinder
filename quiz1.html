@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="quiz.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <title>Mood Minder</title>
+</head>
+<body onclick="ocultarHeader()">
+    <nav>
+        <ul class="links">
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        </ul>
+    </nav>
+
+    <header id="cabecalho">
+        <div>
+            <img src="Quiz1/anxquiz.png">
+            <h2>Anxiety Quiz</h2>
+            <div id="p-cabecalho">
+                <p>Understand your level of anxiety with this quiz that assesses anxiety with the GAD-7, a quiz used in clinical research settings.<br>Reflect on each question and answer them honestly.</p>
+                <a href="https://www.uofmhealth.org/health-library/abn2339" target="_blank">See Source</a>
+                <p>*For educational purposes only.</p>
+                <button id="comecarQuiz" onclick="iniciarQuiz()">Start Quiz</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div id="quiz">
+            <div id="pergunta1">
+                <h1>Over the last 2 weeks, how often...</h1>
+                <h2>Have you felt nervous, anxious or on edge?</h2>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q1" value="0"> Not at all</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q1" value="1"> Several days</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q1" value="2"> More than several days</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q1" value="3"> Nearly every day</div>
+                <button onclick="proximaPergunta(1)">Next</button>
+            </div>
+            <div id="pergunta2">
+                <h1>Over the last 2 weeks, how often...</h1>
+                <h2>Have you felt unable to stop or control worrying?</h2>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q2" value="0"> Not at all</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q2" value="1"> Several days</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q2" value="2"> More than several days</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q2" value="3"> Nearly every day</div>
+                <button onclick="proximaPergunta(2)">Next</button>
+            </div>
+            <div id="pergunta3">
+                <h1>Over the last 2 weeks, how often...</h1>
+                <h2>Have you worried too much about different things?</h2>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q3" value="0"> Not at all</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q3" value="1"> Several days</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q3" value="2"> More than several days</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q3" value="3"> Nearly every day</div>
+                <button onclick="proximaPergunta(3)">Next</button>
+            </div>
+            <div id="pergunta4">
+                <h1>Over the last 2 weeks, how often...</h1>
+                <h2>Have you had trouble relaxing?</h2>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q4" value="0"> Not at all</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q4" value="1"> Several days</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q4" value="2"> More than several days</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q4" value="3"> Nearly every day</div>
+                <button onclick="proximaPergunta(4)">Next</button>
+            </div>
+            <div id="pergunta5">
+                <h1>Over the last 2 weeks, how often...</h1>
+                <h2>Have you become easily annoyed or irritable?</h2>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q5" value="0"> Not at all</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q5" value="1"> Several days</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q5" value="2"> More than several days</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q5" value="3"> Nearly every day</div>
+                <button onclick="proximaPergunta(5)">Next</button>
+            </div>
+            <div id="pergunta6">
+                <h1>Over the last 2 weeks, how often...</h1>
+                <h2>Have you felt afraid, as if something awful might happen?</h2>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q6" value="0"> Not at all</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q6" value="1"> Several days</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q6" value="2"> More than several days</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q6" value="3"> Nearly every day</div>
+                <button onclick="proximaPergunta(6)">Next</button>
+            </div>
+            <div id="pergunta7">
+                <h1>Because of your answers...</h1>
+                <h2>How difficult have these problems made it for you to do your work, take care of things at home, or get along with other people?</h2>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q7" value="0"> Not difficult at all</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q7" value="1"> Somewhat difficult</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q7" value="2"> Very difficult</div>
+                <div class="opcao" onclick="selecionarOpcao(this)"><input type="radio" name="q7" value="3"> Extremely difficult</div>
+                <button onclick="proximaPergunta(7)">See Results</button>
+            </div>
+        </div>
+
+        <div id="resultado" style="display: none;">
+            <h2>Results</h2>
+            <div id="mensagem-none" class="mensagem" style="display: none;">
+                <p class="mensagem-titulo">Mild Anxiety</p>
+                <p>Your recent anxiety levels are within healthy boundaries.<br>Some quick tips that can still be useful when
+                    you feel anxious:<br>🌬️ Deep breaths to keep calm;<br> 📝 Journal about your day;<br>🤗 Embrace yourself as you would embrace a friend.
+                </p>
+            </div>
+            <div id="mensagem-leve" class="mensagem" style="display: none;">
+                <p class="mensagem-titulo">Moderate Anxiety</p>
+                <p>Your recent anxiety levels are within healthy boundaries.<br>Some quick tips that can still be useful when
+                    you feel anxious:<br>🌬️ Deep breaths to keep calm;<br> 📝 Journal about your day;<br>🤗 Embrace yourself as you would embrace a friend.
+                </p>       
+            </div>
+            <div id="mensagem-moderada" class="mensagem" style="display: none;">
+                <p class="mensagem-titulo">Moderately Severe Anxiety</p>
+                <p>Your recent anxiety levels are within the recommended range to see a doctor.<br>Some quick tips managing anxiety in the meantime:<br>
+                    🌬️ Deep breaths to keep calm;<br> 📝 Journal about your day;<br>🤗 Embrace yourself as you would embrace a friend.</p>
+            </div>
+            <div id="mensagem-severa" class="mensagem" style="display: none;">
+                <p class="mensagem-titulo">Severe Anxiety</p>
+                <p>Your recent anxiety levels are within the recommended range to see a doctor.<br>Some quick tips managing anxiety in the meantime:<br>
+                    🌬️ Deep breaths to keep calm;<br> 📝 Journal about your day;<br>🤗 Embrace yourself as you would embrace a friend.</p>
+            </div>
+            </div>
+            <p id="pontuacao"></p>
+        </div>
+    </div>
+    <img class="logo" src="index/logo.png">
+    <script src="Quiz1/quiz1.js"></script>
+</body>
+</html>
