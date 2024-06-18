@@ -1,5 +1,6 @@
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 800;
     background-color: #ebdffd;
     color: #a76eee;
     overflow: hidden;
@@ -115,9 +116,11 @@ button {
     border: none;
     padding: 10px 20px;
     text-align: center;
+    font-family: 'Quicksand', sans-serif;
     text-decoration: none;
     display: block;
     font-size: 16px;
+    font-weight: bold;
     margin: 10px auto;
     cursor: pointer;
     border-radius: 5px;
@@ -188,7 +191,7 @@ button:hover {
     }
     
     nav ul li a {
-        font-size: 5em;
+        font-size: 2.5em;
     }
     
     nav ul li a i {
